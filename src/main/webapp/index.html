@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Northernmost Pottery 2</title>
+<link rel="stylesheet"
+	href="resources/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+<script type="application/javascript" src="resources/jquery-2.1.0.js"></script>
+<script type="application/javascript"
+	src="resources/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+<script src="highlight.js"></script>
+<script src="resources/faster/rsvp.js"></script>
+<script src="resources/faster/pagespecific.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<!-- URL input -->
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-addon">URL</span> <input type="text"
+							class="form-control" id="url"> <span
+							class="input-group-btn">
+							<button class="btn btn-default" type="button" id="submit">Go!</button>
+						</span>
+					</div>
+				</div>
+				<!-- WPM input -->
+				<div class="col-lg-2">
+					<div class="input-group">
+						<span class="input-group-addon">WPM</span> <input type="text"
+							class="form-control" value="500" id="groupsPerMinute">
+					</div>
+				</div>
+				<div class="col-lg-4" align="right">
+					<a href="http://www.fsavard.com/code/speedread/"><img
+				src="resources/faster/faster_logo.gif" alt="Faster"></a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Playback area -->
+		<div class="panel panel-default">
+			<div class="tab_pane" id="playback_pane">
+				<div id="display" class="well well-lg h1 text-center">Placeholder</div>
+
+				<!-- Displays the current paragraph.  Currently hidden, but required by the RSVP widget. -->
+				<div class="controls_div" id="viewerTa_div" style="display:none">
+					<textarea id="viewer_ta" class="form-control" rows="5"></textarea>
+				</div>
+
+				<div class="controls_div" id="playback_controls">
+					<table id="controls_table">
+						<tbody>
+							<tr>
+								<td><a class="playback_control_a" href="#"><img
+										src="images/play.gif" id="play"></a> <a
+									class="playback_control_a" href="#"><img
+										src="images/pause.gif" id="pause"></a> <a
+									class="playback_control_a" href="#"><img
+										src="images/rewind.gif" id="rewind"></a></td>
+								<td>
+									<div id="slider_div" class="ui-slider">
+										<div class="ui-slider-handle" style="left: 182px;"></div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div>
+					<ul class="list-inline">
+						<li>z - Back one paragraph</li>
+						<li>x - Start reading</li>
+						<li>c - Pause reading</li>
+						<li>v - Forward one paragraph</li>
+						<li>d - Rewind to the start of the current paragraph</li>
+					</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Full text</div>
+			<div class="panel-body">
+				<div id="full-text" class="pre-scrollable" style="height:200px"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
